@@ -1,4 +1,16 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .main-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: auto;
+}
+
+h1 {
+  color: #333333;
+}
+
+.avatar {
 }
