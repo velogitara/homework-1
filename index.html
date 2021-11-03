@@ -6,33 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/reset.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
+    <title>My Website</title>
   </head>
   <body>
-    <section>
-      <img class="avatar" src="/img/IMG_1614 1.jpg" alt="my photo" />
-      <div>
-        <a href="https://www.instagram.com/alexpavlishchev/" target="_blank"
-          ><img src="/img/icon/instagram.svg" alt="My instagram link"
-        /></a>
-        <a href="https://www.facebook.com/velogitara" target="_blank"></a
-        ><img src="/img/icon/FB.svg" alt="My facebook link" />
-      </div>
-      <div>
-        <p>32 готовых проекта</p>
-        <p>2 года опыта</p>
-      </div>
-      <div>
-        <img src="/img/icon/js.svg" alt="js" />
-        <img src="/img/icon/react.svg" alt="react" />
-        <img src="/img/icon/node.svg" alt="node" />
-      </div>
-      <a href="https://github.com/velogitara" target="_blank">Мои работы </a>
-    </section>
+    <!-- left section info -->
+    <div class="wrapper">
+      <section class="experience-section">
+        <img class="avatar" src="/img/IMG_1614 1.jpg" alt="my photo" />
+        <div>
+          <a href=""><img src="/img/icon/FB.svg" alt="facebook" class="icon fb-icon" /></a>
+          <a href="https://www.instagram.com/alexpavlishchev/"
+            ><img src="/img/icon/instagram.svg" alt="instagram" class="icon in-icon"
+          /></a>
+        </div>
+        <div class="experience-description">
+          <p class="experience-description-text experience-description-text-first">
+            32 готовых проекта
+          </p>
+          <p class="experience-description-text">2 года опыта</p>
+        </div>
+        <div class="technologies-container">
+          <img src="/img/icon/js.svg" alt="js" class="js-icon" />
+          <img src="/img/icon/react.svg" alt="react" class="react-icon" />
+          <img src="/img/icon/node.svg" alt="node" />
+        </div>
+        <a href="https://github.com/velogitara" target="_blank" class="my-projects-link"
+          >Мои работы
+        </a>
+      </section>
+      <!-- middle section -->
+      <section class="middle-section">
+        <h2 class="my-name">Привет! Я - Александр Павлищев</h2>
+        <h1 class="my-proffesion">
+          Я делаю<br />
+          сайты
+        </h1>
+        <p class="my-adress">Живу в Одессе</p>
+        <p class="my-workstyle">Работаю удаленно</p>
+        <p class="my-describtion">
+          Я - человек-оркестр. В одиночку заменяю<br />
+          целую веб-студию.
+        </p>
+        <div>
+          <p class="can">Умею:</p>
+          <ul class="can-list-style">
+            <li class="can-list-item">
+              <p class="can-list-text">Управлять IT-проектами и командами;</p>
+            </li>
+            <li class="can-list-item">
+              <p class="can-list-text">Senior Front End разработчик;</p>
+            </li>
+            <li class="can-list-item"><p class="can-list-text">Middle Back End разработчик;</p></li>
+            <li class="can-list-item">
+              <p class="can-list-text">
+                Могу проконтролировать качество<br />
+                своего или вашего проекта, как QA - <br />
+                специалист.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- project-price section -->
+
+      <section class="project-price-section">
+        <form action="#" class="project-price-form">
+          <h4 class="project-price-title">Рассчитай стоимость проекта</h4>
+          <div class="project-type-container">
+            <label for="project-type" class="project-price-form-field-title">Тип сайта</label>
+
+            <select name="project-type" id="project-type" class="project-price-select">
+              <option value="Landing-page">Landing page</option>
+              <option value="cms">CMS</option>
+              <option value="Wordpress">Wordpress</option>
+              <option selected value="e-shop">E-shop</option>
+            </select>
+          </div>
+          <div class="activity-type-container">
+            <p class="project-price-form-field-title">Тип Работ</p>
+
+            <div class="activity-type-item">
+              <input
+                type="checkbox"
+                name="project-management"
+                id="project-management"
+                class="activity-type-checkbox"
+              />
+              <label for="project-management" class="activity-type-title">Product Management</label>
+            </div>
+            <div class="activity-type-item">
+              <input type="checkbox" name="design" id="design" class="activity-type-checkbox" />
+              <label for="design" class="activity-type-title">Design</label>
+            </div>
+
+            <div class="activity-type-item">
+              <input
+                type="checkbox"
+                name="developer"
+                id="developer"
+                class="activity-type-checkbox"
+              />
+              <label for="developer" class="activity-type-title">Developer</label>
+            </div>
+
+            <div class="activity-type-item">
+              <input type="checkbox" name="qa" id="qa" class="activity-type-checkbox" />
+              <label for="qa" class="activity-type-title">QA</label>
+            </div>
+          </div>
+          <div class="project-price-container">
+            <p class="project-price-form-field-title">Стоимость></p>
+            <p class="project-price-sum"><span class="project-price-sum-currency">$ </span>1800</p>
+          </div>
+        </form>
+      </section>
+    </div>
   </body>
 </html>
