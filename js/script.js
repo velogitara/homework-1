@@ -87,6 +87,9 @@ const successModal = document.querySelector('#success-modal');
 
 console.log(emailModal);
 
+// перый просчет формы
+calculatework();
+
 formEl.addEventListener('change', calculatework);
 
 formEl.addEventListener('submit', function (event) {
@@ -102,6 +105,9 @@ const closeButtons = document.querySelectorAll('.modal-close-btn');
 
 closeButtons.forEach(function (closeBtn) {
     closeBtn.addEventListener('click', function () {
+
+        const inputContainer = document.querySelector('#email-input-container');
+        inputContainer.classList.remove('email-input-container-error');
         emailModal.classList.remove('modal-active');
         successModal.classList.remove('modal-active');
     });
