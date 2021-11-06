@@ -15,8 +15,25 @@
     <title>My Website</title>
   </head>
   <body>
-    <!-- left section info -->
     <div class="wrapper">
+      <!-- contact section -->
+      <section class="contact-section">
+        <a href="tell:+380938532214" class="phone-link">
+          <img src="/img/icon/phone.svg" alt="phone-link" class="phone-link-icon" />
+        </a>
+        <a href="" class="whatsup-link"
+          ><img
+            src="/img/icon/whatsup.svg"
+            alt="whatsup-link"
+            class="whatsup-link-icon"
+            target="_blank"
+        /></a>
+        <a href="https://t.me/velogitara" class="telegram-link" target="_blank"
+          ><img src="/img/icon/telegram.svg" alt="telegram-link" class="telegram-link-icon"
+        /></a>
+        <a href="tell:+380938532214" class="phone-link-number">+38093-853-22-14</a>
+      </section>
+      <!-- left section info -->
       <section class="experience-section">
         <img class="avatar" src="/img/IMG_1614 1.jpg" alt="my photo" />
         <div>
@@ -77,16 +94,23 @@
       <!-- project-price section -->
 
       <section class="project-price-section">
-        <form action="#" class="project-price-form">
+        <form
+          action="#"
+          class="project-price-form"
+          method="post"
+          name="contact"
+          data-netlify="true"
+          id="project-price-form"
+        >
           <h4 class="project-price-title">Рассчитай стоимость проекта</h4>
           <div class="project-type-container">
             <label for="project-type" class="project-price-form-field-title">Тип сайта</label>
 
             <select name="project-type" id="project-type" class="project-price-select">
-              <option value="Landing-page">Landing page</option>
-              <option value="cms">CMS</option>
-              <option value="Wordpress">Wordpress</option>
-              <option selected value="e-shop">E-shop</option>
+              <option value="landing-page">Landing page</option>
+              <option value="online-store">Online-store</option>
+              <option value="web-application">Web Application</option>
+              <option selected value="mobile-application">Mobile Application</option>
             </select>
           </div>
           <div class="activity-type-container">
@@ -99,7 +123,7 @@
                 id="project-management"
                 class="activity-type-checkbox"
               />
-              <label for="project-management" class="activity-type-title">Product Management</label>
+              <label for="project-management" class="activity-type-title">Project Management</label>
             </div>
             <div class="activity-type-item">
               <input type="checkbox" name="design" id="design" class="activity-type-checkbox" />
@@ -123,10 +147,54 @@
           </div>
           <div class="project-price-container">
             <p class="project-price-form-field-title">Стоимость></p>
-            <p class="project-price-sum"><span class="project-price-sum-currency">$ </span>1800</p>
+            <p class="project-price-sum">
+              <span class="project-price-sum-currency">$ </span><span id="total-price">0</span>
+            </p>
+          </div>
+          <div class="project-price-calculate-button-container">
+            <button class="project-price-calculate-button">Отправить запрос</button>
           </div>
         </form>
       </section>
     </div>
+    <!-- modal section -->
+    <div class="modal-bgd" id="modal-email">
+      <div class="modal-container">
+        <button class="modal-close-btn">
+          <img src="/img/icon/close.svg" alt="close-icon" class="" />
+        </button>
+        <img src="/img/icon/mdi_email-fast.svg" alt="email-fast" class="modal-icon" />
+        <h4 class="modal-title">Я свяжусь с вами в течении часа</h4>
+
+        <form action="#" class="modal-container-form" id="modal-email-container">
+          <div class="email-input-container" id="email-input-container">
+            <label for="user-email" class="user-email-title">Email</label>
+            <input
+              type="email"
+              name="user-email"
+              id="user-email"
+              class="user-email"
+              placeholder="Укажите имэйл"
+            />
+
+            <p class="email-error-text">Check your email</p>
+          </div>
+          <button type="submit" class="modal-submit-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-bgd" id="success-modal">
+      <div class="modal-container modal-container-success">
+        <button class="modal-close-btn">
+          <img src="/img/icon/close.svg" alt="close-icon" class="" />
+        </button>
+        <img src="/img/icon/done.svg" alt="email-fast" class="modal-icon" />
+        <p class="modal-success-message">
+          Всё готово:)<br />
+          Запрос отправлен!
+        </p>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
   </body>
 </html>

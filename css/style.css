@@ -1,6 +1,14 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #f3f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -12,11 +20,46 @@ h1 {
   flex-direction: row;
   padding: 80px;
   margin: 200px;
+  justify-content: space-between;
+  position: relative;
 }
-
+/*Contact-section */
+.contact-section {
+  align-items: center;
+  position: absolute;
+  top: 27px;
+  right: 80px;
+  display: flex;
+  flex-direction: row;
+}
+.phone-link,
+.whatsup-link,
+.telegram-link {
+  text-decoration: none;
+}
+.phone-link-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  text-decoration: none;
+}
+.whatsup-link-icon,
+.telegram-link-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  text-decoration: none;
+}
+.phone-link-number {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #333333;
+}
 /* left section info */
 .experience-section {
-  width: 33%;
+  width: 268px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +104,7 @@ h1 {
 /* middle-section */
 .middle-section {
   width: 33%;
-  margin-left: 72px;
+  margin: 0 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -160,11 +203,13 @@ h1 {
   border-bottom: 1px solid #4f4f4f;
   padding-bottom: 8px;
   margin: 32px;
+  font-family: 'Montserrat' sans-serif;
 }
 
 .activity-type-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 32px;
 }
 
 .activity-type-item {
@@ -190,4 +235,152 @@ h1 {
   font-size: 16px;
   line-height: 24px;
   color: #4f4f4f;
+  margin-bottom: 32px;
+}
+
+.project-price-sum-currency {
+  color: #eb5757;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.project-price-calculate-button-container {
+  width: 100%;
+  text-align: center;
+}
+.project-price-calculate-button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f3f5f9;
+  background: #eb5757;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  padding: 12px 32px 12px 32px;
+  cursor: pointer;
+}
+/* modal-section */
+.modal-bgd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(51 51 51 / 87%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-active {
+  pointer-events: all;
+  opacity: 1;
+}
+.modal-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4075ff;
+}
+.modal-container {
+  background: #fff;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 110px 40px;
+  width: 364px;
+  height: 604px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.user-email-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  color: #333333;
+}
+.modal-container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.user-email {
+  width: 100%;
+  font-family: 'Montserrat' sans-serif;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #4f4f4f;
+}
+
+.email-input-container {
+  margin-bottom: 115px;
+}
+
+.email-error-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #c70303;
+  margin-top: 10px;
+  display: none;
+}
+
+.email-input-container-error .email-error-text {
+  display: block;
+}
+
+.email-input-container-error .user-email {
+  border-bottom: 1px solid #c70303;
+}
+
+.modal-submit-btn {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f3f5f9;
+  background: #eb5757;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  padding: 12px 32px 12px 32px;
+  cursor: pointer;
+}
+.modal-icon {
+  margin-bottom: 35px;
+}
+
+.modal-close-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.modal-success-message {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #4075ff;
+}
+
+.modal-container-success {
+  justify-content: center;
 }
