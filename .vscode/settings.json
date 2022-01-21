@@ -1,10 +1,4 @@
 {
-    "cSpell.words": [
-        "имэйл",
-        "Павлищев",
-        "Стоимость",
-        "preconnect",
-        "referrerpolicy",
-        "whatsup"
-    ]
+  "cSpell.words": ["имэйл", "Павлищев", "Стоимость", "preconnect", "referrerpolicy", "whatsup"],
+  "liveServer.settings.port": 5501
 }
